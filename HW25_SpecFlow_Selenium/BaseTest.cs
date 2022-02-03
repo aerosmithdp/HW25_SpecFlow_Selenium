@@ -10,7 +10,7 @@ namespace HW25_SpecFlow_Selenium
         public IWebDriver StartDriverWithUrl(string url)
         {
             DriverHolder.chrome = new ChromeDriver();
-            DriverHolder.chrome.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(3);
+            DriverHolder.chrome.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(2);
             DriverHolder.chrome.Manage().Window.Maximize();
             DriverHolder.chrome.Navigate().GoToUrl(url);
             return DriverHolder.chrome;
@@ -18,7 +18,7 @@ namespace HW25_SpecFlow_Selenium
 
         public void Dispose()
         {
-            DriverHolder.chrome.Quit();
+            //DriverHolder.chrome.Quit();
         }
     }
 }
