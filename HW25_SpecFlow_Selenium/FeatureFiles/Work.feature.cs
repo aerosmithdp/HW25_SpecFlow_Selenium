@@ -19,21 +19,21 @@ namespace HW25_SpecFlow_Selenium.FeatureFiles
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.9.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [Xunit.TraitAttribute("Category", "Salaries")]
-    public partial class SalariesFeature : object, Xunit.IClassFixture<SalariesFeature.FixtureData>, System.IDisposable
+    [Xunit.TraitAttribute("Category", "Work")]
+    public partial class WorkFeature : object, Xunit.IClassFixture<WorkFeature.FixtureData>, System.IDisposable
     {
         
         private static TechTalk.SpecFlow.ITestRunner testRunner;
         
         private string[] _featureTags = new string[] {
-                "Salaries"};
+                "Work"};
         
         private Xunit.Abstractions.ITestOutputHelper _testOutputHelper;
         
-#line 1 "Salaries.feature"
+#line 1 "Work.feature"
 #line hidden
         
-        public SalariesFeature(SalariesFeature.FixtureData fixtureData, HW25_SpecFlow_Selenium_XUnitAssemblyFixture assemblyFixture, Xunit.Abstractions.ITestOutputHelper testOutputHelper)
+        public WorkFeature(WorkFeature.FixtureData fixtureData, HW25_SpecFlow_Selenium_XUnitAssemblyFixture assemblyFixture, Xunit.Abstractions.ITestOutputHelper testOutputHelper)
         {
             this._testOutputHelper = testOutputHelper;
             this.TestInitialize();
@@ -42,8 +42,8 @@ namespace HW25_SpecFlow_Selenium.FeatureFiles
         public static void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "FeatureFiles", "Salaries", "As a user test\r\nI want to test\r\nIn order to test", ProgrammingLanguage.CSharp, new string[] {
-                        "Salaries"});
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "FeatureFiles", "Work", "As a user test\r\nI want to test\r\nIn order to test", ProgrammingLanguage.CSharp, new string[] {
+                        "Work"});
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -83,10 +83,10 @@ namespace HW25_SpecFlow_Selenium.FeatureFiles
 #line 8
 #line hidden
 #line 9
- testRunner.Given("user on the homepage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("user on the Dou homepage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 10
- testRunner.When("user clicks on the Salaries button at header", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("user clicks on the Work button at header", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
         }
         
@@ -95,14 +95,14 @@ namespace HW25_SpecFlow_Selenium.FeatureFiles
             this.TestTearDown();
         }
         
-        [Xunit.SkippableFactAttribute(DisplayName="View salaries using the widget")]
-        [Xunit.TraitAttribute("FeatureTitle", "Salaries")]
-        [Xunit.TraitAttribute("Description", "View salaries using the widget")]
-        public virtual void ViewSalariesUsingTheWidget()
+        [Xunit.SkippableFactAttribute(DisplayName="Browse jobs through categories")]
+        [Xunit.TraitAttribute("FeatureTitle", "Work")]
+        [Xunit.TraitAttribute("Description", "Browse jobs through categories")]
+        public virtual void BrowseJobsThroughCategories()
         {
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("View salaries using the widget", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Browse jobs through categories", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 12
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -127,29 +127,33 @@ this.ScenarioInitialize(scenarioInfo);
 this.FeatureBackground();
 #line hidden
 #line 13
- testRunner.When("user selected Dnipro in City drop-down menu", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("user clicks on the category QA", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 14
- testRunner.And("user selected Junior QA Engineer in Positon drop-down menu", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.Then("user is redirected to the QA category page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 15
- testRunner.And("user selected position Manual QA in Specialization drop-down menu", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.When("user selected experience < one year", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 16
- testRunner.Then("user sees information according to the selected criteria", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.And("user selected the city Dnipro", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 17
+ testRunner.Then("user sees a list of vacancies for Dnipro in the QA category with less than a year" +
+                        " of experience", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
         }
         
-        [Xunit.SkippableFactAttribute(DisplayName="View salary dynamics")]
-        [Xunit.TraitAttribute("FeatureTitle", "Salaries")]
-        [Xunit.TraitAttribute("Description", "View salary dynamics")]
-        public virtual void ViewSalaryDynamics()
+        [Xunit.SkippableFactAttribute(DisplayName="Job search")]
+        [Xunit.TraitAttribute("FeatureTitle", "Work")]
+        [Xunit.TraitAttribute("Description", "Job search")]
+        public virtual void JobSearch()
         {
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("View salary dynamics", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Job search", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 19
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -174,71 +178,38 @@ this.ScenarioInitialize(scenarioInfo);
 this.FeatureBackground();
 #line hidden
 #line 20
- testRunner.When("user clicks on the Dynamics button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("user enters \"Junior QA\" text into the search field", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 21
- testRunner.And("user selected city Dnipro in Dynamics of programmers salaries drop-down menu", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("user clicks on Find button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 22
- testRunner.Then("user sees the dynamics of salaries in the city Dnipro", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("user is redirected to a search page that displays a list of vacancies for Junior " +
+                        "QA", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-            }
-            this.ScenarioCleanup();
-        }
-        
-        [Xunit.SkippableFactAttribute(DisplayName="View salaries by city")]
-        [Xunit.TraitAttribute("FeatureTitle", "Salaries")]
-        [Xunit.TraitAttribute("Description", "View salaries by city")]
-        public virtual void ViewSalariesByCity()
-        {
-            string[] tagsOfScenario = ((string[])(null));
-            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("View salaries by city", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 23
+ testRunner.When("user selected experience one...three years", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 24
+ testRunner.And("user selected the city Kiev", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
 #line 25
-this.ScenarioInitialize(scenarioInfo);
-#line hidden
-            bool isScenarioIgnored = default(bool);
-            bool isFeatureIgnored = default(bool);
-            if ((tagsOfScenario != null))
-            {
-                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
-            }
-            if ((this._featureTags != null))
-            {
-                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
-            }
-            if ((isScenarioIgnored || isFeatureIgnored))
-            {
-                testRunner.SkipScenario();
-            }
-            else
-            {
-                this.ScenarioStart();
-#line 8
-this.FeatureBackground();
-#line hidden
-#line 26
- testRunner.When("user clicks on the By cities button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 27
- testRunner.And("user selected period december 2020 in Salaries by cities drop-down menu", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 28
- testRunner.Then("user sees the salary by city for the period december 2020", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("user sees list of vacancies in Kiev with experience from one to three years for J" +
+                        "unior QA", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
         }
         
-        [Xunit.SkippableFactAttribute(DisplayName="View salary survey demographics")]
-        [Xunit.TraitAttribute("FeatureTitle", "Salaries")]
-        [Xunit.TraitAttribute("Description", "View salary survey demographics")]
-        public virtual void ViewSalarySurveyDemographics()
+        [Xunit.SkippableFactAttribute(DisplayName="View first job")]
+        [Xunit.TraitAttribute("FeatureTitle", "Work")]
+        [Xunit.TraitAttribute("Description", "View first job")]
+        public virtual void ViewFirstJob()
         {
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("View salary survey demographics", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 31
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("View first job", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 28
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -260,16 +231,72 @@ this.ScenarioInitialize(scenarioInfo);
                 this.ScenarioStart();
 #line 8
 this.FeatureBackground();
+#line hidden
+#line 29
+ testRunner.When("user clicks on the First job link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 30
+ testRunner.Then("user is redirected to the First job page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 31
+ testRunner.When("user selected city Kharkiv", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 32
- testRunner.When("user clicks on the Demographics button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.Then("user sees a list of vacancies in Kharkiv", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 33
- testRunner.And("user selected period december 2019 in Demography of the salary survey drop-down m" +
-                        "enu", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [Xunit.SkippableFactAttribute(DisplayName="Viewing Trends")]
+        [Xunit.TraitAttribute("FeatureTitle", "Work")]
+        [Xunit.TraitAttribute("Description", "Viewing Trends")]
+        public virtual void ViewingTrends()
+        {
+            string[] tagsOfScenario = ((string[])(null));
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Viewing Trends", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 35
+this.ScenarioInitialize(scenarioInfo);
 #line hidden
-#line 34
- testRunner.Then("user then sees the payroll survey demographics for december 2019", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+            bool isScenarioIgnored = default(bool);
+            bool isFeatureIgnored = default(bool);
+            if ((tagsOfScenario != null))
+            {
+                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((this._featureTags != null))
+            {
+                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((isScenarioIgnored || isFeatureIgnored))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 8
+this.FeatureBackground();
+#line hidden
+#line 36
+ testRunner.When("user clicks on the Trends link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 37
+ testRunner.Then("user is redirected to the Trends page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 38
+ testRunner.When("user selected the city Odessa", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 39
+ testRunner.And("user selected category QA", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 40
+ testRunner.And("user selected experience five plus years", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 41
+ testRunner.Then("user sees trends for Dnipro in the QA category with more than five years of exper" +
+                        "ience", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -282,12 +309,12 @@ this.FeatureBackground();
             
             public FixtureData()
             {
-                SalariesFeature.FeatureSetup();
+                WorkFeature.FeatureSetup();
             }
             
             void System.IDisposable.Dispose()
             {
-                SalariesFeature.FeatureTearDown();
+                WorkFeature.FeatureTearDown();
             }
         }
     }

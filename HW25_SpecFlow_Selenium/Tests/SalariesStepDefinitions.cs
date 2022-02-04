@@ -8,6 +8,7 @@ namespace HW25_SpecFlow_Selenium
     [Binding]
     public class SalariesStepDefinitions : BaseTest
     {
+
         [Given(@"user on the homepage")]
         public void GivenUserOnTheHomepage()
         {
@@ -15,32 +16,32 @@ namespace HW25_SpecFlow_Selenium
         }
 
         [When(@"user clicks on the Salaries button at header")]
-        public void WhenUserClicksOnTheSalariesButtonAtHeader()
+        public static void WhenUserClicksOnTheSalariesButtonAtHeader()
         {
             DriverHolder.chrome.FindElement(By.XPath("//a[contains(@href, 'https://jobs.dou.ua/salaries/')]")).Click();
         }
 
-        [When(@"user selected '([^']*)' in City drop-down menu")]
-        public void WhenUserSelectedInCityDrop_DownMenu(string дніпро)
+        [When(@"user selected Dnipro in City drop-down menu")]
+        public static void WhenUserSelectedDniproInCityDrop_DownMenu()
         {
             DriverHolder.chrome.FindElement(By.CssSelector("option[value='Dnipro']")).Click();
         }
 
-        [When(@"user selected '([^']*)' in Positon drop-down menu")]
-        public void WhenUserSelectedInPositonDrop_DownMenu(string p0)
+        [When(@"user selected Junior QA Engineer in Positon drop-down menu")]
+        public static void WhenUserSelectedJuniorQAEngineerInPositonDrop_DownMenu()
         {
             DriverHolder.chrome.FindElement(By.XPath("//*[contains(text(),'Junior QA engineer')]")).Click();   
         }
 
-        [When(@"user selected position '([^']*)' in Specialization drop-down menu")]
-        public void WhenUserSelectedPositionInSpecializationDrop_DownMenu(string p0)
+        [When(@"user selected position Manual QA in Specialization drop-down menu")]
+        public static void WhenUserSelectedPositionManualQAInSpecializationDrop_DownMenu()
         {
             DriverHolder.chrome.FindElement(By.XPath("//*[contains(text(),'Manual QA')]")).Click();
 
         }
 
         [Then(@"user sees information according to the selected criteria")]
-        public void ThenUserSeesInformationAccordingToTheSelectedCriteria()
+        public static void ThenUserSeesInformationAccordingToTheSelectedCriteria()
         {
             string actual = DriverHolder.chrome.Url;
             string expected = "https://jobs.dou.ua/salaries/#period=jun2021&city=Dnipro&title=Junior%20QA%20engineer&language=&spec=Manual%20QA&exp1=0&exp2=10";
@@ -48,20 +49,21 @@ namespace HW25_SpecFlow_Selenium
         }
 
 
+
         [When(@"user clicks on the Dynamics button")]
-        public void WhenUserClicksOnTheDynamicsButton()
+        public static void WhenUserClicksOnTheDynamicsButton()
         {
             DriverHolder.chrome.FindElement(By.XPath("//a[contains(@href, 'https://jobs.dou.ua/salaries/dynamics/')]")).Click();
         }
 
-        [When(@"user selected city '([^']*)' in Dynamics of programmers salaries drop-down menu")]
-        public void WhenUserSelectedCityInDynamicsOfProgrammersSalariesDrop_DownMenu(string дніпро)
+        [When(@"user selected city Dnipro in Dynamics of programmers salaries drop-down menu")]
+        public static void WhenUserSelectedCityDniproInDynamicsOfProgrammersSalariesDrop_DownMenu()
         {
             DriverHolder.chrome.FindElement(By.CssSelector("option[value='https://jobs.dou.ua/salaries/dynamics/Dnipro/']")).Click();
         }
 
-        [Then(@"user sees the dynamics of salaries in the city '([^']*)'")]
-        public void ThenUserSeesTheDynamicsOfSalariesInTheCity(string дніпро)
+        [Then(@"user sees the dynamics of salaries in the city Dnipro")]
+        public static void ThenUserSeesTheDynamicsOfSalariesInTheCityDnipro()
         {
             string actual = DriverHolder.chrome.Url;
             string expected = "https://jobs.dou.ua/salaries/dynamics/Dnipro/";
@@ -69,20 +71,21 @@ namespace HW25_SpecFlow_Selenium
         }
 
 
+
         [When(@"user clicks on the By cities button")]
-        public void WhenUserClicksOnTheByCitiesButton()
+        public static void WhenUserClicksOnTheByCitiesButton()
         {
             DriverHolder.chrome.FindElement(By.XPath("//a[contains(@href, 'https://jobs.dou.ua/salaries/cities/')]")).Click();
         }
 
-        [When(@"user selected period '([^']*)' in Salaries by cities drop-down menu")]
-        public void WhenUserSelectedPeriodInSalariesByCitiesDrop_DownMenu(string p0)
+        [When(@"user selected period december 2020 in Salaries by cities drop-down menu")]
+        public static void WhenUserSelectedPeriodDecember2020InSalariesByCitiesDrop_DownMenu()
         {
             DriverHolder.chrome.FindElement(By.CssSelector("option[value='https://jobs.dou.ua/salaries/cities/dec2020/']")).Click();
         }
 
-        [Then(@"user sees the salary by city for the period '([^']*)'")]
-        public void ThenUserSeesTheSalaryByCityForThePeriod(string p0)
+        [Then(@"user sees the salary by city for the period december 2020")]
+        public static void ThenUserSeesTheSalaryByCityForThePeriodDecember2020()
         {
             string actual = DriverHolder.chrome.Url;
             string expected = "https://jobs.dou.ua/salaries/cities/dec2020/";
@@ -90,20 +93,21 @@ namespace HW25_SpecFlow_Selenium
         }
 
 
+
         [When(@"user clicks on the Demographics button")]
-        public void WhenUserClicksOnTheDemographicsButton()
+        public static void WhenUserClicksOnTheDemographicsButton()
         {
             DriverHolder.chrome.FindElement(By.XPath("//a[contains(@href, 'https://jobs.dou.ua/salaries/demography/')]")).Click();
         }
 
-        [When(@"user selected period '([^']*)' in Demography of the salary survey drop-down menu")]
-        public void WhenUserSelectedPeriodInDemographyOfTheSalarySurveyDrop_DownMenu(string p0)
+        [When(@"user selected period december 2019 in Demography of the salary survey drop-down menu")]
+        public static void WhenUserSelectedPeriodDecember2019InDemographyOfTheSalarySurveyDrop_DownMenu()
         {
             DriverHolder.chrome.FindElement(By.CssSelector("option[value='/salaries/demography/dec2019']")).Click();
         }
 
-        [Then(@"user then sees the payroll survey demographics for '([^']*)'")]
-        public void ThenUserThenSeesThePayrollSurveyDemographicsFor(string p0)
+        [Then(@"user then sees the payroll survey demographics for december 2019")]
+        public static void ThenUserThenSeesThePayrollSurveyDemographicsForDecember2019()
         {
             string actual = DriverHolder.chrome.Url;
             string expected = "https://jobs.dou.ua/salaries/demography/dec2019/";
