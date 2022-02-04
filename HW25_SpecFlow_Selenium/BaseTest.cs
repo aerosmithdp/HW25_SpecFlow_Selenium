@@ -7,12 +7,11 @@ namespace HW25_SpecFlow_Selenium
 {
     public class BaseTest : IDisposable
     {
-        public IWebDriver StartDriverWithUrl(string url)
+        public void StartDriverWithUrl(string url)
         {
             DriverHolder.chrome = new ChromeDriver();
             DriverHolder.chrome.Navigate().GoToUrl(url);
             DriverHolder.chrome.Manage().Window.Maximize();
-            return DriverHolder.chrome;
         }
 
         public void Dispose()

@@ -12,7 +12,7 @@ namespace HW25_SpecFlow_Selenium
         [Given(@"user on the Dou homepage")]
         public void GivenUserOnTheDouHomepage()
         {
-            DriverHolder.chrome = StartDriverWithUrl("https://dou.ua/");
+            StartDriverWithUrl("https://dou.ua/");
         }
 
         [When(@"user clicks on the Work button at header")]
